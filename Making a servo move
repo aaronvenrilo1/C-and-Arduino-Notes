@@ -1,0 +1,28 @@
+// C++ code
+//
+
+#include <Servo.h> // servo C++ library
+
+int position = 0; // initializing the position to 0
+
+Servo servo12; // creating a servo object named servo12
+
+void setup()
+{ 
+  servo12.attach(12,500, 2500); // Attaches the servo to pin 12, and makes 0 degrees = 500ms, and 2500ms (Pulse Width Modulation)
+}
+
+void loop() // Loop function that doesn't need to return anything, just does something
+{
+  for (position = 0; position <= 180 ; position += 1) // tells the servo to start at position 0 degrees, and sets the limit to 180 degrees, but increase by steps of 1 degree
+  { 
+    servo12.write(position);
+    delay(20);
+  }
+  for (position = 180; position >= 0 ; position -= 1) // same thing just the other way around
+  {
+    servo12.write(position);
+  	delay(20);
+  }
+  
+}
