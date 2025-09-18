@@ -1,0 +1,35 @@
+#include <LiquidCrystal.h>
+
+const int rs = 11, en = 10, d4 = 9, d5 = 6, d6 = 5, d7 = 3;
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+
+void setup(){
+  lcd.begin(16,2);
+  lcd.print("i love you");
+  lcd.setCursor(0,1);
+  lcd.print("so much");
+
+  delay(2000);
+  lcd.clear();
+
+  lcd.print("you are so");
+  lcd.setCursor(0,1);
+  lcd.print("cute my baby");
+
+  delay(2000);
+  lcd.clear();
+
+  lcd.print("mwah mwah mwah");
+  lcd.setCursor(2, 1);
+  lcd.print("mwah mwah");
+
+  delay(2000);
+  lcd.clear();
+
+  lcd.print("goodnight i love");
+  lcd.setCursor(0, 1);
+  lcd.print("you just in case");
+}
+
+void loop(){
+}
